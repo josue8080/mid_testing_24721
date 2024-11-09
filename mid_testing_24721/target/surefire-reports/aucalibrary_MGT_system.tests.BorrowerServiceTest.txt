@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: aucalibrary_MGT_system.tests.BorrowerServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.255 s <<< FAILURE! -- in aucalibrary_MGT_system.tests.BorrowerServiceTest
+aucalibrary_MGT_system.tests.BorrowerServiceTest.testCalculateLateFees -- Time elapsed: 0.126 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "aucalibrary_MGT_system.models.User.getMembership()" because the return value of "aucalibrary_MGT_system.models.Book.getBorrowedBy()" is null
+	at aucalibrary_MGT_system.services.BorrowerService.calculateLateFees(BorrowerService.java:61)
+	at aucalibrary_MGT_system.tests.BorrowerServiceTest.testCalculateLateFees(BorrowerServiceTest.java:44)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

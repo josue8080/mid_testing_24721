@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: aucalibrary_MGT_system.tests.ShelfServiceTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.533 s <<< FAILURE! -- in aucalibrary_MGT_system.tests.ShelfServiceTest
+aucalibrary_MGT_system.tests.ShelfServiceTest.testAssignShelfToRoom -- Time elapsed: 0.515 s <<< ERROR!
+java.lang.ExceptionInInitializerError
+	at aucalibrary_MGT.hibernate.HibernateUtil.<clinit>(HibernateUtil.java:15)
+	at aucalibrary_MGT_system.dao.RoomDAO.save(RoomDAO.java:15)
+	at aucalibrary_MGT_system.tests.ShelfServiceTest.setUp(ShelfServiceTest.java:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.hibernate.boot.spi.XmlMappingBinderAccess.<init>(XmlMappingBinderAccess.java:43)
+	at org.hibernate.boot.MetadataSources.<init>(MetadataSources.java:86)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:123)
+	at org.hibernate.cfg.Configuration.<init>(Configuration.java:118)
+	at aucalibrary_MGT.hibernate.HibernateUtil.<clinit>(HibernateUtil.java:13)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 10 more
+
+aucalibrary_MGT_system.tests.ShelfServiceTest.testCountBooksInRoom -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class aucalibrary_MGT.hibernate.HibernateUtil
+	at aucalibrary_MGT_system.dao.RoomDAO.save(RoomDAO.java:15)
+	at aucalibrary_MGT_system.tests.ShelfServiceTest.setUp(ShelfServiceTest.java:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
+	at aucalibrary_MGT.hibernate.HibernateUtil.<clinit>(HibernateUtil.java:15)
+	... 5 more
+
